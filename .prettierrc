@@ -1,0 +1,11 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": "es5",
+  "blacketSpacing": true,
+  "jsxBlacketSameLine": false,
+  "arrowParens": "always",
+  "proseWrap": "always"
+}
