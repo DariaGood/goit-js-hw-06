@@ -4,8 +4,8 @@ form.addEventListener('submit', onFormSubmit);
 
    function onFormSubmit(event) {
     event.preventDefault();
+
     const formElements = event.currentTarget.elements;
-    console.dir(formElements);
 
     const email = formElements.email;
     const password = formElements.password;
@@ -15,4 +15,5 @@ form.addEventListener('submit', onFormSubmit);
     }
    
     console.log({email: email.value, password: password.value});
-   }
+    form.reset()
+}

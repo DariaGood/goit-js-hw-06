@@ -13,12 +13,11 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery');
-const elements =[];
+
 for (const el of images) {
-const things = galleryEl.insertAdjacentHTML ('beforeend', `<li><img src = '${el.url} alt = '${el.alt}' width = '350'></li>`);
-elements.push(some);
-};
+const galleryEl = document.querySelector('.gallery');
+galleryEl.insertAdjacentHTML ('afterbegin', `<li><img src = '${el.url} alt = '${el.alt}' width = '350'></li>`);
+
 
 galleryEl.style.cssText = `
 display: flex;
@@ -27,4 +26,8 @@ align-items: center;
 justify-content:space-between;
 margin: 0;
 list-style:none;`
+
+};
+
+
 
