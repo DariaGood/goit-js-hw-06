@@ -17,3 +17,4 @@ form.addEventListener('submit', onFormSubmit);
     console.log({email: email.value, password: password.value});
     form.reset()
 }
+

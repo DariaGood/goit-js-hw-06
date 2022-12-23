@@ -6,6 +6,6 @@
 input.addEventListener('input', onBlur);
 
 function onBlur(event) {
-    span.style.fontSize = event.currentTarget.value + '56px';
+    span.style.fontSize = event.currentTarget.value + 'px';
     
 }
