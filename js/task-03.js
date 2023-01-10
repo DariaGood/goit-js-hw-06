@@ -11,21 +11,15 @@ const images = [
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
-];
+]
 
+const galleryList = document.querySelector('.gallery')
 
-const elements =[ ];
-for (const el of images) {
-const galleryEl = document.querySelector('.gallery');
-const things = galleryEl.insertAdjacentHTML ('beforeend', `<li><img src = '${el.url} alt = '${el.alt}' width = '350'></li>`);
-elements.map(things);
-};
+const makeGalleryMarkup = ({ url, alt }) => {
+  return `<li class = "gallery__item"><img class = "gallery__image" src = "${url}" alt = "${alt}" width = "640"></img></li>`
+}
 
-galleryEl.style.cssText = `
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content:space-between;
-margin: 0;
-list-style:none;`
+const makeGallery = images.map(makeGalleryMarkup).join('')
+galleryList.insertAdjacentHTML('beforeend', makeGallery)
 
+console.log(galleryList)
